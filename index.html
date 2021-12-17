@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="food resturant">
+    <meta name="author" content="mohamed">
+    <meta name="keywords" content="html,css,js">
+    <title>Shopping Project</title>
+    <!-- Css files -->
+    <link rel="stylesheet" href="Css/all.min.css">
+    <link rel="stylesheet" href="Css/normalize.css">
+    <link rel="stylesheet" href="Css/master.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="topOfPage">
+        <div class="container">
+            <span><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></span>
+            <span><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></span>
+            <span><a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></span>
+            <span><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></span>
+            <span class="call_me">call: +59-222-1234</span>
+        </div>
+    </div>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h2>logo</h2>
+            </div>
+            <ul class="nav">
+                <li><a href="#">home</a></li>
+                <li><a href="#">shop</a></li>
+                <li class="men"><a href="#">men</a></li>
+                <li><a href="#">women</a></li>
+                <li><a href="#">kids</a></li>
+            </ul>
+            <ul class="additional">
+                <li class="menu"><i class="fas fa-bars" ></i></li>
+                <li><i class="fas fa-search" id="search"></i></li>
+                <li><i class="fas fa-user-alt" id="user"></i></li>
+                <li class="buy"><i class="fas fa-shopping-cart" id="buy"></i></li>
+            </ul>
+        </div>
+    </header>
+    <div class="searchProcess">
+        <div class="container">
+            <input type="text" placeholder="Search For Product">
+            <i class="fas fa-times" id="closeSearch"></i>
+        </div>
+    </div>
+    <!-- Start Login -->
+    <div class="formLogin">
+        <form action="">
+            <h2>log in</h2>
+            <i class="fas fa-times" id="closeLogIn"></i>
+            <input type="email" placeholder="Example@gmail.com" required>
+            <input type="password" placeholder="Password" required>
+            <input type="submit" value="LOG IN" >
+            <label >Forget Your Password?</label>
+            <label id="createAccount">Create Acoount</label>
+        </form>
+    </div>
+    <div class="forgetAccount">
+        <form action="">
+            <h2>sign up</h2>
+            <i class="fas fa-times" id="closeSignUp"></i>
+            <input type="text" placeholder="Full Name">
+            <input type="email" placeholder="Example@gmail.com" required>
+            <input type="password" placeholder="Password" required>
+            <input type="submit" value="SIGN UP">
+            <label id="haveAccount">Alreay Have Account?</label>
+        </form>
+    </div>
+    <!-- End Login -->
+    <!-- Start Home -->
+    <div class="home">
+        <div class="content container-sliders">
+            <div class="box slider first">
+                <p class="limited">limited offer</p>
+                <p>30% off <br>with <span class="varityColor">promo code</span></p>
+                <button>shop now</button>
+            </div>
+            <div class="box slider two">
+                <p class="limited">limited offer</p>
+                <p>30% off <br>with <span class="varityColor">promo code</span></p>
+                <button>shop now</button>
+            </div>
+            <div class="box slider three">
+                <p class="limited">limited offer</p>
+                <p>30% off <br>with <span class="varityColor">promo code</span></p>
+                <button>shop now</button>
+            </div>
+            <div class="box slider four">
+                <p class="limited">limited offer</p>
+                <p>30% off <br>with <span class="varityColor">promo code</span></p>
+                <button>shop now</button>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="prev" class="prev disabled"><i class="fas fa-angle-left"></i></button>
+            <button id="next" class="next"><i class="fas fa-angle-right"></i></button>
+        </div>
+    </div>
+    <!-- End Home -->
+    <!-- Start featured categories -->
+    <div class="featuredCategories">
+        <h2>featured categories</h2>
+        <div class="container">
+            <div class="box">
+                <img src="images/feature_1.jpg" alt="">
+                <span>T-Shirts</span>
+            </div>
+            <div class="box">
+                <img src="images/feature_2.jpg" alt="">
+                <span>Men T-Shirts</span>
+            </div>
+            <div class="box">
+                <img src="images/feature_3.jpg" alt="">
+                <span>Kids T-Shirts</span>
+            </div>
+            <div class="box">
+                <img src="images/feature_4.jpg" alt="">
+                <span>Pillow</span>
+            </div>
+            <div class="box">
+                <img src="images/feature_5.jpg" alt="">
+                <span>Phone Cover</span>
+            </div>
+            <div class="box">
+                <img src="images/feature_6.jpg" alt="">
+                <span>Shopping Bags</span>
+            </div>
+        </div>
+    </div>
+    <!-- End featured categories -->
+    <!-- Start New Arrival-->
+    <div class="newArrival">
+        <h2>new arrival</h2>
+        <p>we provide you new fasion design clothes</p>
+        <div class="container">
+            <div class="box">
+                <span class="buy"><i class="fas fa-shopping-cart"></i></span>
+                <img src="images/p-1.png" alt="">
+                <p>Drawstring T-Shirt</p>
+                <span>$22.00</span>
+            </div>
+            <div class="box">
+                <span class="buy"><i class="fas fa-shopping-cart"></i></span>
+                <img src="images/p-2.png" alt="">
+                <p>Drawstring T-Shirt</p>
+                <span>$22.00</span>
+            </div>
+            <div class="box">
+                <span class="buy"><i class="fas fa-shopping-cart"></i></span>
+                <img src="images/p-3.png" alt="">
+                <p>Drawstring T-Shirt</p>
+                <span>$22.00</span>
+            </div>
+            <div class="box">
+                <span class="buy"><i class="fas fa-shopping-cart"></i></span>
+                <img src="images/p-4.png" alt="">
+                <p>Drawstring T-Shirt</p>
+                <span>$22.00</span>
+            </div>
+            <div class="box">
+                <span class="buy"><i class="fas fa-shopping-cart"></i></span>
+                <img src="images/p-5.png" alt="">
+                <p>Drawstring T-Shirt</p>
+                <span>$22.00</span>
+            </div>
+            <div class="box">
+                <span class="buy"><i class="fas fa-shopping-cart"></i></span>
+                <img src="images/p-6.png" alt="">
+                <p>Drawstring T-Shirt</p>
+                <span>$22.00</span>
+            </div>
+            <div class="box">
+                <span class="buy"><i class="fas fa-shopping-cart"></i></span>
+                <img src="images/p-7.png" alt="">
+                <p>Drawstring T-Shirt</p>
+                <span>$22.00</span>
+            </div>
+            <div class="box">
+                <span class="buy"><i class="fas fa-shopping-cart"></i></span>
+                <img src="images/p-8.png" alt="">
+                <p>Drawstring T-Shirt</p>
+                <span>$22.00</span>
+            </div>
+        </div>
+    </div>
+    <!-- End New Arrival-->
+    <div class="sales">
+        <div class="container">
+            <div class="box">
+                <img src="images/sale-1.jpg" alt="">
+                <div class="text">
+                    <p>bag with rose <br>pattern</p>
+                    <span>Sale off 25%</span>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/sale-2.jpg" alt="">
+                <div class="text">
+                    <p>hello <br>summer</p>
+                    <span>Sale off 20%</span>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/sale-3.jpg" alt="">
+                <div class="text">
+                    <p>let's party hard<br>pillow</p>
+                    <span>Sale off 25%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start items-->
+    <div class="items">
+        <h2>featured items</h2>
+        <p>we provide you new fasion design clothes</p>
+        <div class="container">
+            <div class="box">
+                <span class="buy"><i class="fas fa-shopping-cart"></i></span>
+                <img src="images/p-1.png" alt="">
+                <p>Drawstring T-Shirt</p>
+                <span>$22.00</span>
+            </div>
+            <div class="box">
+                <span class="buy"><i class="fas fa-shopping-cart"></i></span>
+                <img src="images/p-2.png" alt="">
+                <p>Drawstring T-Shirt</p>
+                <span>$22.00</span>
+            </div>
+            <div class="box">
+                <span class="buy"><i class="fas fa-shopping-cart"></i></span>
+                <img src="images/p-3.png" alt="">
+                <p>Drawstring T-Shirt</p>
+                <span>$22.00</span>
+            </div>
+            <div class="box">
+                <span class="buy"><i class="fas fa-shopping-cart"></i></span>
+                <img src="images/p-4.png" alt="">
+                <p>Drawstring T-Shirt</p>
+                <span>$22.00</span>
+            </div>
+        </div>
+    </div>
+    <!-- End items -->
+    <div class="divImage">
+        <div class="textUp">
+            <p >limited offer</p>
+            <p>30% off <br>with <span class="varityColor">promo code</span></p>
+            <button>shop now</button>
+        </div>
+    </div>
+    <!-- Start services-->
+    <div class="services">
+        <div class="container">
+            <div class="box">
+                <i class="fas fa-shuttle-van"></i>
+                <h4>free shopping</h4>
+                <span>Free Shopping for all US order</span>
+            </div>
+            <div class="box">
+                <i class="fas fa-headphones-alt"></i>
+                <h4>support 24/7</h4>
+                <span>We Support 24h a day</span>
+            </div>
+            <div class="box">
+                <i class="fas fa-sync-alt"></i>
+                <h4>100% money back</h4>
+                <span>You have 30 days to return</span>
+            </div>
+        </div>
+    </div>
+    <!-- End services -->
+    <!-- Start Footer-->
+    <footer>
+        <div class="container">
+            <p>copyright 2021 - MohamedHesham</p>
+            <form action=""> 
+                <input type="email" placeholder="Example@gmail.com" required>
+                <input type="submit" value="Subscribe">
+            </form>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <script src="main.js"></script>
+</body>
+</html>

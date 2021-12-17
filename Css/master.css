@@ -1,0 +1,755 @@
+/* Start Global Rules */
+:root{
+    --greenColor:#049493;
+    --blackColor:#383434;
+    --redColor:#ec344c;
+}
+*{
+    padding: 0;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Noto Sans Display', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small and Mobile */
+@media (min-width:768px){
+    .container{
+        width: 750px;
+    }
+}
+/*    Meduim */
+@media (min-width:992px){
+    .container{
+        width: 970px;
+    }
+}
+/*    large */
+@media (min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
+/* Start top of page */
+.topOfPage{
+    height: 50px;
+}
+.topOfPage .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.topOfPage .container span{
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+.topOfPage .container span i{
+    color: var(--blackColor);
+    transition: .3s;
+}
+.topOfPage .container span i:hover{
+    color: var(--greenColor);
+}
+.topOfPage .container span.call_me{
+    margin-left: 20px;
+    color: #777;
+    text-transform: capitalize;
+}
+/* End Top of page */
+/* Start Header */
+header{
+    width: 100%;
+    height: 70px;
+    padding-top: 20px;
+    position: fixed;
+    top: -1px;
+    box-shadow: 0 0 4px #ddd;
+    background-color: white;
+    z-index: 3;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container .logo h2{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 30px;
+    position: relative;
+}
+header .container .logo h2::before{
+    content: "";
+    position: absolute;
+    right: -7px;
+    top: 55%;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--greenColor);
+}
+header .container ul.nav li{
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+}
+header .container ul.nav li a{
+    text-transform: uppercase;
+    font-size: 13px;
+    color: var(--blackColor);
+    transition: .3s;
+}
+header .container ul.nav li.men::before{
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: 10%;
+    width: 0;
+    height: 0;
+    border: 5px solid #ff7043;
+    border-color: #ff7043 transparent transparent  transparent;
+}
+header .container ul.nav li.men::after{
+    content: "SALE";
+    position: absolute;
+    top: -17px;
+    right: -12%;
+    font-size: 8px;
+    color: white;
+    padding: 2px;
+    background-color: #ff7043;
+    width: fit-content;
+}
+header .container ul.nav li a:hover{
+    color: var(--greenColor);
+}
+header .container ul.additional li{
+    display: inline-block;
+    margin-right: 10px;
+}
+header .container ul.additional li i{
+    color: #383434d4;
+    cursor: pointer;
+    transition: .3s;
+}
+header .container ul.additional li i:hover{
+    color: var(--greenColor);
+}
+header .container ul.additional li.buy{
+    position: relative;
+}
+header .container ul.additional li.buy::before{
+    content: "0";
+    position: absolute;
+    right: -8px;
+    top: -10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    color: white;
+    background-color: var(--greenColor);
+    font-size: 8px;
+    text-align: center;
+    line-height: 15px;
+}
+header .container ul.additional li.menu{
+    display: none;
+    transition: .3s;
+}
+/* Start Media */
+@media(max-width:768px){
+    header .container ul.additional li.menu{
+        display: inline-block;
+    }
+    header .container ul.nav{
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding:0 0 10px 0;
+        background-color: #fbfbfb;
+        display: none;
+        transition: .3s;
+    }
+    header .container ul.nav li{
+        width: 100%;
+        padding: 15px 20px;
+        background-color: white;
+        border-bottom: 1px solid var(--blackColor);
+    }
+    header .container ul.nav li a{
+        color: var(--blackColor);
+    }
+    header .container ul.nav li.men::before,header .container ul.nav li.men::after{
+        display: none;
+    }
+}
+/* End Media */
+.searchProcess{
+    width: 100%;
+    height: 200px;
+    position: fixed;
+    bottom: -200px;
+    box-shadow: 0 0 4px #ddd;
+    background-color: white;
+    padding: 50px;
+    transition: 0.3s;
+    z-index: 2;
+}
+.searchProcess .container{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--blackColor);
+}
+.searchProcess .container input{
+    width: 80%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: 50px;
+}
+.searchProcess .container input::placeholder{
+    font-size: 24px;
+}
+.searchProcess .container i{
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+@media(max-width:768px){
+    .searchProcess .container input::placeholder{
+        font-size:20px;
+    }
+}
+/* End Header */
+/* Start LOGIN*/
+.formLogin
+,.forgetAccount{
+    width: 100%;
+    height: 100vh;
+    position:fixed;
+    top: 0;
+    display: none;
+    transition: 0.3s;
+}
+.formLogin{
+    z-index: 4;
+}
+.forgetAccount{
+    z-index: 3;
+}
+.formLogin::before
+,.forgetAccount::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 60%);
+}
+.formLogin form
+,.forgetAccount form{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 250px;
+    padding: 15px 20px;
+    background-color: white;
+    border-radius: 3px;
+}
+.forgetAccount form{
+    height: 280px;
+}
+.formLogin form h2
+,.forgetAccount form h2{
+    text-transform:uppercase;
+    font-weight:500;
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.formLogin form input
+,.forgetAccount form input{
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    outline: none;
+    border: 1px solid var(--blackColor);
+    border-radius: 5px;
+    height: 30px;
+    padding: 4px;
+}
+.formLogin form input[type="submit"]
+,.forgetAccount form input[type="submit"]{
+    color: white;
+    background-color: var(--greenColor);
+    border: none;
+    cursor: pointer;
+}
+.formLogin form label
+,.forgetAccount form label{
+    display: inline-block;
+    font-size: 14px;
+    color: #777;
+}
+.formLogin form label#createAccount{
+    margin-left: 60px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.forgetAccount form label#haveAccount{
+    cursor: pointer;
+}
+.formLogin form i#closeLogIn
+,.forgetAccount form i#closeSignUp{
+    position: absolute;
+    top: 5%;
+    right: 4%;
+    color: #777;
+    cursor: pointer;
+}
+/* End LOGIN */
+/* Start Home Page */
+.home{
+    height: calc(100vh - 200px);
+    overflow: hidden;
+}
+.home .content{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,100%);
+    transition: .3s;
+}
+.home .content .box{
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 10%;
+    padding-top: 150px;
+}
+.home .content .box.first{
+    background-image: url(../Images/Slider_01.jpg);
+}
+.home .content .box.two{
+    background-image: url(../Images/Slider_02.jpg);
+}
+.home .content .box.three{
+    background-image: url(../Images/Slider_03.jpg);
+}
+.home .content .box.four{
+    background-image: url(../Images/Slider_04.jpg);
+}
+.home .content .box p.limited{
+    position: relative;
+    display: block;
+    text-transform: capitalize;
+    color: var(--blackColor);
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.home .content .box p:nth-of-type(2){
+    text-transform: capitalize;
+    color:black;
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.home .content .box p:nth-of-type(2)>span{
+    color: var(--greenColor);
+    margin-left: 5px;
+}
+.home .content .box button{
+    text-transform: uppercase;
+    color: white;
+    background-color: var(--greenColor);
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    padding: 8px 17px;
+}
+.home .controls .prev,
+.home .controls .next{
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid var(--blackColor);
+    text-align: center;
+    line-height: 25px;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 2;
+    background-color: white;
+}
+.home .controls .prev i,
+.home .controls .next i{
+    font-size: 20px;
+    color: var(--blackColor);
+}
+.home .controls .prev{
+    left: 20px;
+}
+.home .controls .next{
+    right: 20px;
+}
+.home .controls .prev.disabled
+,.home .controls .next.disabled{
+    opacity: 0.5;
+    cursor: no-drop;
+}
+/* End Home Page */
+/*  Start featured categories */
+.featuredCategories{
+    padding: 50px 0;
+}
+.featuredCategories h2{
+    width: fit-content;
+    margin: 0 auto;
+    text-transform: capitalize;
+    font-size: 26px;
+    font-weight:500;
+    padding: 10px 15px;
+    margin-bottom: 50px;
+    border: 1px solid #3834343d;
+}
+.featuredCategories .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+    gap: 30px;
+}
+.featuredCategories .container .box{
+    text-align: center;
+}
+.featuredCategories .container .box img{
+    width: 150px;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+.featuredCategories .container .box span{
+    display: block;
+    font-size: 14px;
+    color: var(--blackColor);
+    font-weight: bold;
+}
+/*  End featured categories */
+/* Start New Arrival */
+.newArrival{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.newArrival h2{
+    width: fit-content;
+    margin: 0 auto;
+    text-transform: capitalize;
+    font-size: 26px;
+    font-weight:500;
+    color: white;
+    background-color: var(--blackColor);
+    padding: 5px 25px;
+}
+.newArrival h2+p{
+    text-align: center;
+    margin-top: 10px;
+    text-transform: capitalize;
+    color: #777;
+    margin-bottom: 50px;
+}
+.newArrival .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 20px;
+}
+.newArrival .container .box{
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    /* box-shadow: rgb(0 0 0 / 15%) 0px 2px 3px 0px; */
+    border: 1px solid #ddd;
+    transition: .3s;
+    position: relative;
+    cursor: pointer;
+}
+.newArrival .container .box:hover{
+    box-shadow: rgb(0 0 0 / 15%) 0px 2px 3px 0px; 
+}
+.newArrival .container .box img{
+    max-width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+}
+.newArrival .container .box p{
+    color: #777;
+    margin-bottom: 5px;
+}
+.newArrival .container .box span.buy{
+    position: absolute;
+    right: 10%;
+    top: 8%;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    background-color: var(--greenColor);
+    opacity: 0;
+    transition: 0.3s;
+}
+.newArrival .container .box span.buy i{
+    color: white;
+}
+.newArrival .container .box:hover span.buy{
+    opacity: 1;
+}
+/* Start New Arrival */
+/* Start Sales */
+.sales{
+    padding: 50px 0;
+}
+.sales .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 30px;
+}
+.sales .container .box{
+    position: relative;
+}
+.sales .container .box img{
+    max-width: 100%;
+    border-radius: 5px;
+}
+.sales .container .box .text{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+    z-index: 1;
+}
+.sales .container .box .text p{
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+.sales .container .box .text span{
+    color: var(--blackColor);
+    font-size: 14px;
+}
+/* End Sales */
+/* Start Items*/
+.items{
+    padding: 50px 0;
+}
+.items h2{
+    width: fit-content;
+    margin: 0 auto;
+    text-transform: capitalize;
+    font-size: 26px;
+    font-weight:500;
+    color: white;
+    background-color: var(--blackColor);
+    padding: 5px 25px;
+}
+.items h2+p{
+    text-align: center;
+    margin-top: 10px;
+    text-transform: capitalize;
+    color: #777;
+    margin-bottom: 50px;
+}
+.items .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 20px;
+}
+.items .container .box{
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    /* box-shadow: rgb(0 0 0 / 15%) 0px 2px 3px 0px; */
+    border: 1px solid #ddd;
+    transition: .3s;
+    position: relative;
+    cursor: pointer;
+}
+.items .container .box:hover{
+    box-shadow: rgb(0 0 0 / 15%) 0px 2px 3px 0px; 
+}
+.items .container .box img{
+    max-width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+}
+.items .container .box p{
+    color: #777;
+    margin-bottom: 5px;
+}
+.items .container .box span.buy{
+    position: absolute;
+    right: 10%;
+    top: 8%;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    background-color: var(--greenColor);
+    opacity: 0;
+    transition: 0.3s;
+}
+.items .container .box span.buy i{
+    color: white;
+}
+.items .container .box:hover span.buy{
+    opacity: 1;
+}
+/* End Items */
+.divImage {
+    background-image: url(../Images/Slider_03.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    padding-left: 10%;
+    padding-top: 100px;
+}
+.divImage p:first-child{
+    position: relative;
+    display: block;
+    text-transform: capitalize;
+    color: var(--blackColor);
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.divImage p:nth-child(2){
+    text-transform: capitalize;
+    color: black;
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.divImage p:nth-child(2)>span{
+    color: var(--greenColor);
+    margin-left: 5px;
+}
+.divImage button{
+    text-transform: uppercase;
+    color: white;
+    background-color: var(--greenColor);
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    padding: 8px 17px;
+    margin-bottom: 10px;
+}
+/* Start services */
+.services{
+    padding: 50px 0;
+}
+.services .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 30px;
+}
+.services .container .box{
+    border: 1px solid #ddd;
+    box-shadow: 0 0 4px #ddd;
+    text-align: center;
+    padding: 30px 10px 20px;
+}
+.services .container .box i{
+    color: var(--greenColor);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.services .container .box h4{
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.services .container .box span{
+    color: #777;
+    font-size: 14px;
+}
+/* End services */
+/* Start Footer */
+footer{
+    padding: 50px 0;
+    box-shadow: 0 0 4px #ddd;
+}
+footer .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+footer .container p{
+    width: 50%;
+    padding-left: 20px;
+    color: #616161;
+}
+footer .container form{
+    width: 50%;
+    padding-right: 20px;
+    text-align: right;
+}
+footer .container form input[type="email"]{
+    height: 40px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 4px #ddd;
+    color: var(--greenColor);
+}
+footer .container form input[type="submit"]{
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: var(--greenColor);
+    cursor: pointer;
+}
+@media(max-width:768px){
+    footer .container{
+        flex-direction: column;
+    }
+    footer .container p,
+    footer .container form{
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+}
+/* End Footer */
